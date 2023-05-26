@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "d106c34f-f60e-4d79-87a4-aa74d9153ba7",
+		"name": "Book_Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18716477"
+	},
+	"item": [
+		{
+			"name": "user-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_name\": \"Smrati Sengar\",\n    \"email_id\": \"SmratiSengar@gmail.com\",\n    \"phone_number\": \"786339632\",\n    \"password\": \"qwerty\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user-register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user-register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email_id\": \"Smrati@gmail.com\",\n    \"password\": \"qwerty\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user-signIn",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user-signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF9pZCI6IlNtcmF0aVNlbmdhckBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJTbXJhdGkgU2VuZ2FyIiwicGhvbmVfbnVtYmVyIjoiNzg2MzM5NjMyIiwiaWF0IjoxNjg0OTk1MTUyfQ.vU1ELlXyArmLKDtPAuMqu_H2zmwtV4StjVd_BajG3Zk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_name\": \"November 9\",\n    \"auther_name\" : \"Colleen Hoover\",\n    \"genre\" : \" Romance novel, Fiction, Contemporary romance\",\n    \"description\": \"A monumental modern romance with a literary twist, November 9 follows the life of a writer and former actress. Hoover introduces Ben, a young man who has dreams of becoming a writer. By chance, Ben is acquainted with Fallon, who is just about to embark on a huge move to the other side of the country.\",\n    \"book_price\": \"251\",\n    \"publisher_name\": \"Simon & Schuster\",\n    \"publish_date\": \"2015-11-10\",\n    \"total_pages\": \"320\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/create-book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"create-book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-book-detail-by-id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF9pZCI6IlNtcmF0aVNlbmdhckBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJTbXJhdGkgU2VuZ2FyIiwicGhvbmVfbnVtYmVyIjoiNzg2MzM5NjMyIiwiaWF0IjoxNjg0OTk1MTUyfQ.vU1ELlXyArmLKDtPAuMqu_H2zmwtV4StjVd_BajG3Zk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\" : \"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/get-book-detail-by-id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get-book-detail-by-id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-my-created-books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF9pZCI6IlNtcmF0aVNlbmdhckBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJTbXJhdGkgU2VuZ2FyIiwicGhvbmVfbnVtYmVyIjoiNzg2MzM5NjMyIiwiaWF0IjoxNjg0OTk1MTUyfQ.vU1ELlXyArmLKDtPAuMqu_H2zmwtV4StjVd_BajG3Zk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"page_no\" : \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/get-my-created-books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get-my-created-books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-created-books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF9pZCI6IlNtcmF0aVNlbmdhckBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJTbXJhdGkgU2VuZ2FyIiwicGhvbmVfbnVtYmVyIjoiNzg2MzM5NjMyIiwiaWF0IjoxNjg0OTk1MTUyfQ.vU1ELlXyArmLKDtPAuMqu_H2zmwtV4StjVd_BajG3Zk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"page_no\" : \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/get-all-created-books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get-all-created-books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-my-created-book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF9pZCI6IlNtcmF0aVNlbmdhckBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJTbXJhdGkgU2VuZ2FyIiwicGhvbmVfbnVtYmVyIjoiNzg2MzM5NjMyIiwiaWF0IjoxNjg0OTk1MTUyfQ.vU1ELlXyArmLKDtPAuMqu_H2zmwtV4StjVd_BajG3Zk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\" : \"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/delete-my-created-book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"delete-my-created-book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF9pZCI6IlNtcmF0aVNlbmdhckBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJTbXJhdGkgU2VuZ2FyIiwicGhvbmVfbnVtYmVyIjoiNzg2MzM5NjMyIiwiaWF0IjoxNjg0OTk1MTUyfQ.vU1ELlXyArmLKDtPAuMqu_H2zmwtV4StjVd_BajG3Zk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\" : \"4\",\n    \"book_name\": \"November 49\",\n    \"auther_name\" : \"Colleen Hoover\",\n    \"genre\" : \" Romance novel, Fiction, Contemporary romance\",\n    \"description\": \"A monumental modern romance with a literary twist, November 9 follows the life of a writer and former actress. Hoover introduces Ben, a young man who has dreams of becoming a writer. By chance, Ben is acquainted with Fallon, who is just about to embark on a huge move to the other side of the country.\",\n    \"book_price\": \"251\",\n    \"publisher_name\": \"Simon & Schuster\",\n    \"publish_date\": \"2015-11-10\",\n    \"total_pages\": \"320\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/update-book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"update-book"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
